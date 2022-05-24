@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/05/2022, 08:22:46 PM
+    Author     : josar
+*/
+
+.ajs--btn{
+    height: 100px;
+    width: 100px;
+    font-size: 52px;
+    margin: 0 50px;
+}
+#calcular\:resultadoId{
+    font-size: 100px !important;
+}
+
+input{
+    font-size: 50px !important;
+    text-align: end;
+}
+

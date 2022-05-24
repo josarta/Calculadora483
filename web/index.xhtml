@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Calculadora</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"></link>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h:form id="calcular">
+                <div class="row">               
+                    <div class="col-4">
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Valora</label>
+                            <h:inputText value="#{operacionesSession.valora}" class="form-control" id="valoraId" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Valorb</label>
+                            <h:inputText value="#{operacionesSession.valorb}" class="form-control" id="valorbId" />
+                        </div>
+                        <div class="mb-3">
+                            <h:commandButton action="#{operacionesSession.sumarvalores()}" value="+" class="btn btn-primary ajs--btn"/>
+                            <h:commandButton action="#{operacionesSession.restarvalores()}" value="-" class="btn btn-secondary ajs--btn"/>
+                        </div>
+                        <div class="mb-3">
+                            <h:commandButton action="#{operacionesSession.multiplicarvalores()}" value="*" class="btn btn-success ajs--btn"/>
+                            <h:commandButton action="#{operacionesSession.divisionvalores()}" value="/" class="btn btn-danger ajs--btn"/>                        </div>
+
+                    </div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Resultado</label>
+                            <h:inputText value="#{operacionesSession.resultado}" class="form-control" id="resultadoId" disabled="true" />
+                        </div>
+
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Valor A</th>
+                                    <th scope="col">Valor B</th>
+                                    <th scope="col">Operacion</th>
+                                    <th scope="col">Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>10</th>
+                                    <td>5</td>
+                                    <td>+</td>
+                                    <td>15</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
